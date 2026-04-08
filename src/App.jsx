@@ -34,11 +34,6 @@ function App() {
     setSearchTerm(e.target.value.toLowerCase());
   };
 
- 
-
-  
-  
-
   return (
     <div className={`app ${theme} ${isMenuOpen ? 'menu--open' : ''}`}>
       <Nav toggleTheme={toggleTheme} toggleMenu={toggleMenu} />

@@ -1,0 +1,117 @@
+.about__title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 39px;
+}
+
+.about__img {
+    height: auto;
+    width: 100%;
+
+}
+
+.about__img--container {
+    width: 100%;
+}
+
+.about__description--container {
+    display: flex;
+}
+
+.about__paragraph {
+    width: 100%;
+    padding: 0 24px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.why_choose_us {
+    text-align: center;
+    font-size: 30px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 26px;
+    gap: 30px;
+}
+
+.feature-box {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+span {
+    color: rgb(98, 180, 207);
+}
+
+
+
+
+@media(max-width:931px) {
+    .about__description--container {
+        flex-direction: column;
+    }
+
+    .features {
+        padding-right: 20px;
+    }
+}
+
+@media(max-width:634px) {
+    .features {
+        font-size: 10px;
+    }
+
+    .about__paragraph {
+        font-size: 18px;
+    }
+
+    .why_choose_us {
+        font-size: 18px;
+    }
+
+    .about__title {
+        font-size: 24px;
+    }
+}
+
+@media(max-width:414px) {
+    .features {
+        font-size: 8px;
+
+    }
+
+    
+}
+
+@media(max-width:378px) {
+    .features {
+        font-size: 7px;
+
+    }
+
+   .about__title{
+    font-size:19px;
+   }
+
+   .about__paragraph{
+    font-size:10px;
+   }
+
+   .why_choose_us{
+    font-size:14px;
+   }
+}
