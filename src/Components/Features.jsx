@@ -2,7 +2,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
-import { FeaturedProducts } from '../data';
+import { AllProducts } from '../data';
 import './Features.css'
 
 
@@ -17,7 +17,7 @@ const Features = () => {
                 </div>
                 <div class="product__container">
                     <div className="products">
-                        {FeaturedProducts.map((product) => (
+                        {AllProducts.slice(0, 4).map((product) => (
                             <div className="product__card" key={product.id}>
                                 <figure className="product__item">
                                     <img className="product" src={product.image} alt={product.name} />

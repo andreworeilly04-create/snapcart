@@ -22,6 +22,23 @@ function App() {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const [isInputOpen, setIsInputOpen] = useState(false);
+
+  const toggleSearch = () => {
+    setIsInputOpen((prev) => !prev);
+  };
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+ 
+
+  
+  
+
   return (
     <div className={`app ${theme} ${isMenuOpen ? 'menu--open' : ''}`}>
       <Nav toggleTheme={toggleTheme} toggleMenu={toggleMenu} />
@@ -36,7 +53,7 @@ function App() {
            
         } />
 
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Products  isInputOpen={isInputOpen} toggleSearch={toggleSearch} handleSearch={handleSearch} searchTerm={searchTerm} />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import './Recommended.css'
-import { RecommendedProducts } from '../data.js'
+import { AllProducts } from '../data.js'
 
 const Recommended = () => {
     return (
@@ -16,7 +16,7 @@ const Recommended = () => {
                 </div>
                 <div class="product__container">
                     <div className="products">
-                        {RecommendedProducts.map((product) => (
+                        {AllProducts.sort(() => 0.5 - Math.random()).slice(0, 4).map((product) => (
                             <div className="product__card" key={product.id}>
                                 <figure className="product__item">
                                     <img className="product" src={product.image} alt={product.name} />
