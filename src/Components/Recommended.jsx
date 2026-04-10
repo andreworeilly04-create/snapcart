@@ -4,6 +4,8 @@ import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import './Recommended.css'
 import { AllProducts } from '../data.js'
+import { Link } from 'react-router-dom';
+
 
 const Recommended = () => {
     return (
@@ -19,7 +21,7 @@ const Recommended = () => {
                         {AllProducts.sort(() => 0.5 - Math.random()).slice(0, 4).map((product) => (
                             <div className="product__card" key={product.id}>
                                 <figure className="product__item">
-                                    <img className="product" src={product.image} alt={product.name} />
+                                   <Link to={`/product/${product.id}`}><img className="product" src={product.image} alt={product.name} /> </Link>
                                 </figure>
                                 <h3 className="product__name">
                                     {product.name}

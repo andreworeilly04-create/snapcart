@@ -3,6 +3,7 @@ import { faStar, faStarHalfAlt, faSearch, faTimes } from '@fortawesome/free-soli
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import { AllProducts } from '../data'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 import './Products.css'
 
@@ -84,7 +85,7 @@ return (
         {categorizedProducts.map((product) => (
           <div className="product__card" key={product.id}>
             <figure className="product__item">
-              <img className="product" src={product.image} alt={product.name} />
+             <Link to={`/product/${product.id}`}><img className="product" src={product.image} alt={product.name} /></Link>
             </figure>
             <h3 className="product__name">
               {product.name}

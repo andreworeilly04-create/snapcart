@@ -1,0 +1,43 @@
+#product{
+    background-color:lightblue;
+    transition:all 300ms ease;
+}
+
+.dark #product{
+    background-color:darkblue;
+    transition:all 300ms ease;
+}
+
+.dark .product__name{
+    transition:all 300ms ease;
+    color:white;
+}
+
+.dark .product__price{
+    transition:all 300ms ease;
+    color:white;
+}
+
+.product__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+
+.product_image{
+    max-width:330px;
+    margin-top:30px;
+}
+
+.product__description{
+    max-width:900px;
+    transition:all 300ms ease;
+    font-weight:bold;
+}
+
+.dark .product__description{
+    max-width:900px;
+    color:white;
+    transition:all 300ms ease;
+}

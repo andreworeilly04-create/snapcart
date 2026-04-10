@@ -104,3 +104,35 @@ input, textarea{
     font-size:24px;
     margin-bottom:100px;
 }
+
+@media(max-width:460px){
+    .contact__title{
+        font-size:24px;
+    }
+
+    .contact_info--title{
+        font-size:24px;
+    }
+
+    .phone_number{
+        font-size:18px;
+    }
+
+    .email_address{
+        font-size:18px;
+    }
+}
+
+
+@media(max-width:382px){
+    
+    .phone_number{
+        font-size:13px;
+        width:90%;
+    }
+
+    .email_address{
+        font-size:13px;
+        width:90%;
+    }
+}

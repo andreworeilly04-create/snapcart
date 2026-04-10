@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Contact.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_9irgjua',
+      'template_n5w0r7b',
+      form.current,
+      'GL1hSa2TuOXGaNGo5'
+    )
+    .then((result) => {
+      console.log('Success!', result.text); alert("Message sent successfully!"); e.target.reset();}, (error) => {
+        console.log('Failed...', error.text); alert("Something went wrong, please try again"); 
+      });
+      };
+    
+ 
+    
   return (
     <>
        <section id="contact">
@@ -11,12 +34,13 @@ const Contact = () => {
           <h3 className="contact__title">
             Send Us a Message
           </h3>
-          <form className="contact__input--container">
+          <form ref={form} onSubmit={sendEmail} className="contact__input--container">
   
-            <input type="name" placeholder="Enter your First Name" required />
+            <input type="name" name="name" placeholder="Enter your First Name" required />
            
-            <input type="name" placeholder="Enter your Last Name" required />
-            <textarea placeholder="Enter your Message" required />
+            <input type="name" name="name" placeholder="Enter your Last Name" required />
+            <input type="email" name="user_email" placeholder="Enter your Email" required />
+            <textarea name="message" placeholder="Enter your Message" required />
             <button className="btn">Send Message</button>
           </form>
           </div>
@@ -32,4 +56,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

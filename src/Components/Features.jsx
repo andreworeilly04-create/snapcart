@@ -4,6 +4,8 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'
 import { AllProducts } from '../data';
 import './Features.css'
+import { Link } from 'react-router-dom';
+
 
 
 const Features = () => {
@@ -20,7 +22,7 @@ const Features = () => {
                         {AllProducts.slice(0, 4).map((product) => (
                             <div className="product__card" key={product.id}>
                                 <figure className="product__item">
-                                    <img className="product" src={product.image} alt={product.name} />
+                                  <Link to={`/product/${product.id}`}><img className="product" src={product.image} alt={product.name} /></Link>
                                 </figure>
                                 <h3 className="product__name">
                                     {product.name}
