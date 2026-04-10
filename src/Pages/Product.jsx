@@ -1,5 +1,5 @@
-import React from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useParams } from 'react-router-dom';
 import './Product.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStarHalfAlt, faStar, faStar as faStarRegular } from '@fortawesome/free-solid-svg-icons';
@@ -7,10 +7,15 @@ import { faStarHalfAlt, faStar, faStar as faStarRegular } from '@fortawesome/fre
 
 const Product = ({ AllProducts }) => {
     const { productId } = useParams();
+    
+     const [selectedSize, setSelectedSize] = useState(null);
 
     const product = AllProducts?.find((p) => String(p.id) === String(productId));
 
     if (!product) return <div>Product not found!</div>;
+
+   
+
   return (
     <section id="product">
         <div className="product__container">
@@ -32,10 +37,53 @@ const Product = ({ AllProducts }) => {
                                 <div className="product__description--container">
                                     <p className="product__description">{product.description}</p>
                                 </div>
-            <button className="btn">Add To Cart</button>
+                                {product.category === 'CLOTHING' && (
+                                    <div className="product__sizes">
+                                        <h4 className="size-label">Select Size: </h4>
+                                        <div className="size-options">
+                                            {['S', 'M', 'L', 'XL', 'XXL'].map((size) => (
+                                                <button key={size} className={`size-button ${selectedSize  === size ? 'selected' : ''}`} onClick={() => setSelectedSize(size)}>{size}</button>
+                                            ))}
+                                        </div>
+                                        </div>
+                                )}
+            <button className="btn" disabled={!selectedSize}>Add To Cart</button>
+        </div>
+
+
+        <div className="related__products--container">
+            <h3 className="related__products--title">Related Products</h3>
+             <div className="products">
+                
+                                    {AllProducts.filter((item) => item.category === product.category && item.id !== product.id).slice(0, 4).map((product) => (
+                                        <div className="product__card" key={product.id}>
+                                            <figure className="product__item">
+                                               <Link to={`/product/${product.id}`}><img className="product" src={product.image} alt={product.name} /> </Link>
+                                            </figure>
+                                            <h3 className="product__name">
+                                                {product.name}
+                                            </h3>
+                                            <del className="old_product__price">${product.oldPrice.toFixed(2)}</del>
+                                            <p className="product__price">${product.price.toFixed(2)}</p>
+                                            <div className="product__rating">
+                                                {new Array(5).fill(0).map((_, index) => {
+                                                    const starValue = index + 1;
+                                                    if (starValue <= product.rating) {
+                                                        return <FontAwesomeIcon key={index} icon={faStar} />;
+                                                    } else if (starValue - 0.5 <= product.rating) {
+                                                        return <FontAwesomeIcon key={index} icon={faStarHalfAlt} />
+                                                    } else {
+                                                        return <FontAwesomeIcon key={index} icon={faStarRegular} />;
+                                                    }
+                                                })}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
         </div>
     </section>
     
+        
   )
 }
 
