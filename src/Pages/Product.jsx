@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
+import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import './Product.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStarHalfAlt, faStar, faStar as faStarRegular } from '@fortawesome/free-solid-svg-icons';
+import { faStarHalfAlt, faStar, faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 
 
 const Product = ({ AllProducts }) => {
@@ -18,6 +19,9 @@ const Product = ({ AllProducts }) => {
 
   return (
     <section id="product">
+        <div className="back__container">
+            <Link to="/products"><button className="back_btn"><FontAwesomeIcon icon={faArrowLeft} /></button></Link><p className="back">Back</p>
+        </div>
         <div className="product__container">
             <img className="product_image" src={product.image} alt={product.name} />
             <h1 className="product__name">{product.name}</h1>

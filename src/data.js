@@ -26,7 +26,14 @@ import menjeans from './assets/men-jeans.png'
 import menshorts from './assets/men-shorts.avif'
 import skinbluejeanswomen from './assets/skinnybluejeansforwomen.png'
 import basketball from './assets/basketball.avif'
-
+import soccerball from './assets/soccerball.png'
+import tennisball from './assets/tennisball.webp'
+import football from './assets/football.webp'
+import securitybreach from './assets/fnafsecuritybreach.webp'
+import minecraft from './assets/minecraft.png'
+import soniccolorsultimate from './assets/soniccolorsultimate.jpg'
+import callofdutyvanguard from './assets/callofdutyvanguard.jpg'
+import gyroorseat from './assets/elctric_scooter_with_seat_C1S.webp'
 
 export const AllProducts = [
     {
@@ -296,44 +303,134 @@ export const AllProducts = [
     {
         id: 25,
         name: 'Jeans for Men',
-        oldPrice:30.44,
-        price:15.65,
-        image:menjeans,
-        rating:3.5,
-        category:'CLOTHING',
-        description:'Men’s jeans are durable, versatile pants made primarily from denim, designed for comfort and everyday wear. They come in various fits—such as slim, regular, and relaxed—and styles ranging from classic blue to modern distressed looks, making them suitable for casual and semi-casual outfits.'
+        oldPrice: 30.44,
+        price: 15.65,
+        image: menjeans,
+        rating: 3.5,
+        category: 'CLOTHING',
+        description: 'Men’s jeans are durable, versatile pants made primarily from denim, designed for comfort and everyday wear. They come in various fits—such as slim, regular, and relaxed—and styles ranging from classic blue to modern distressed looks, making them suitable for casual and semi-casual outfits.'
     },
 
     {
-        id:26,
-        name:'Shorts for Men',
-        oldPrice:50.78,
-        price:20.32,
-        image:menshorts,
-        rating:4.5,
-        category:'CLOTHING',
-        description:'Men’s shorts are comfortable, lightweight garments designed for warm weather and casual wear. They come in various styles—such as athletic, cargo, and chino—offering flexibility, breathability, and ease of movement for everyday activities.'
+        id: 26,
+        name: 'Shorts for Men',
+        oldPrice: 50.78,
+        price: 20.32,
+        image: menshorts,
+        rating: 4.5,
+        category: 'CLOTHING',
+        description: 'Men’s shorts are comfortable, lightweight garments designed for warm weather and casual wear. They come in various styles—such as athletic, cargo, and chino—offering flexibility, breathability, and ease of movement for everyday activities.'
     },
 
     {
-        id:27,
-        name:'Skinny blue jeans for women',
-        oldPrice:55.65,
-        price:23.54,
-        rating:4.5,
-        image:skinbluejeanswomen,
-        category:'CLOTHING',
-        description:'Women’s skinny blue jeans are form-fitting denim pants that hug the body from waist to ankle, offering a sleek and flattering silhouette. Typically made with stretch fabric, they provide comfort and flexibility while maintaining a stylish, modern look suitable for casual or dressy outfits.'
+        id: 27,
+        name: 'Skinny blue jeans for women',
+        oldPrice: 55.65,
+        price: 23.54,
+        rating: 4.5,
+        image: skinbluejeanswomen,
+        category: 'CLOTHING',
+        description: 'Women’s skinny blue jeans are form-fitting denim pants that hug the body from waist to ankle, offering a sleek and flattering silhouette. Typically made with stretch fabric, they provide comfort and flexibility while maintaining a stylish, modern look suitable for casual or dressy outfits.'
     },
 
     {
-        id:28,
-        name:'Basketball',
-        oldPrice:32.65,
-        price:12.54,
+        id: 28,
+        name: 'Basketball',
+        oldPrice: 32.65,
+        price: 12.54,
+        rating: 5,
+        image: basketball,
+        category: 'SPORTS',
+        description: 'Basketball is a fast-paced team sport where players score points by shooting a ball through a raised hoop. It emphasizes skill, agility, teamwork, and strategy, and is played both recreationally and professionally worldwide.'
+    },
+
+    {
+        id: 29,
+        name: 'Soccer ball',
+        oldPrice: 23.54,
+        price: 19.54,
+        rating: 5,
+        image: soccerball,
+        category: 'SPORTS',
+        description: 'A soccer ball is a round ball used in the sport of soccer, typically made of synthetic leather with a pattern of panels, designed for kicking, passing, and scoring goals.'
+    },
+
+    {
+
+        id: 30,
+        name: 'Tennis Ball',
+        oldPrice: 45.65,
+        price: 23.54,
+        rating: 4.5,
+        image: tennisball,
+        category: 'SPORTS',
+        description: 'A tennis ball is a small, lightweight ball covered in felt, usually bright yellow, designed for the sport of tennis and used for hitting back and forth over a net.'
+    },
+
+    {
+        id: 31,
+        name: 'Football',
+        oldPrice: 25.65,
+        price: 15.43,
+        rating: 3,
+        image: football,
+        category: 'SPORTS',
+        description: 'A football is an oval-shaped ball used in sports like American football, made of leather or synthetic material, designed for throwing, catching, and kicking.'
+    },
+
+    {
+        id: 32,
+        name: "Five Nights at Freddy's Security Breach for Xbox One and Xbox Series X",
+        oldPrice: 39.99,
+        price: 29.99,
+        rating: 3.5,
+        image: securitybreach,
+        category: 'GAMES',
+        description: "Five Nights at Freddy's: Security Breach is a first-person survival horror game where players explore a massive, eerie mall while avoiding hostile animatronics, using stealth, strategy, and limited resources to survive the night."
+    },
+
+    {
+        id:33, 
+        name:'Minecraft for Xbox Series X One and Series S',
+        oldPrice:49.54,
+        price:34.54,
+        rating:4,
+        image:minecraft,
+        category:'GAMES',
+        description:'Minecraft is an open-world sandbox game where players build, explore, and survive in a blocky, procedurally generated world using creativity, crafting, and adventure.'
+    },
+
+    {
+        id:34,
+        name:'Sonic Colors Ultimate for Xbox Series X and S',
+        oldPrice:34.54,
+        price:21.43,
         rating:5,
-        image:basketball,
-        category:'SPORTS',
-        description:'Basketball is a fast-paced team sport where players score points by shooting a ball through a raised hoop. It emphasizes skill, agility, teamwork, and strategy, and is played both recreationally and professionally worldwide.'
+        image:soniccolorsultimate,
+        category:'GAMES',
+        description:'Sonic Colors: Ultimate is a fast-paced platformer where players control Sonic as he races through vibrant worlds, uses special alien powers, and works to stop Dr. Eggman’s latest plan.'
     },
+
+    {
+        id:35,
+        name:'Call of Duty vanguard for Xbox Series X and One',
+        oldPrice:32.54,
+        price:15.65,
+        rating:5,
+        image:callofdutyvanguard,
+        category:'GAMES',
+        description:'Call of Duty: Vanguard is a World War II–themed first-person shooter where players fight across multiple battlefronts in fast-paced combat, featuring both a single-player campaign and competitive multiplayer modes.'
+    },
+
+    {
+        id:36,
+        name:'Gyroor C1S Electric Scooter with seat and basket',
+        oldPrice:325.54,
+        price:234.54,
+        rating:4.5,
+        image:gyroorseat,
+        category:'E_VEHICLES',
+        description:'The Gyroor C1S Electric Scooter With Seat & Carry Basket is a sit-down electric scooter designed for short-distance travel, featuring a comfortable seat, a 450W motor, and a top speed of about 15 mph. It is built for commuting or casual rides and includes a basket for carrying small items.'
+    },
+
 ]
